@@ -3,9 +3,12 @@ import express from 'express';
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Main route');
+    const response = {
+        hi: 'you',
+    };
+    res.send(response);
 });
 
-app.listen(3000, () => {
-    console.log('vBenefits API running at localhost:3000');
+app.listen(8000, () => {
+    console.log('vBenefits API running at localhost:8000');
 });
